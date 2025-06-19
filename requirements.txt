@@ -1,1 +1,5 @@
+Django>=4.0
+gunicorn
+xhtml2pdf
+# plus any other packages your app needs
 
