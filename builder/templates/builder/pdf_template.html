@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            font-size: 16px; /* increased from default */
+        }
+        h1, h2 {
+            text-align: center;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 28px; /* bigger main title */
+        }
+        h2 {
+            background-color: #f4f4f4;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 22px; /* bigger section titles */
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .skills {
+            list-style-type: square;
+            font-size: 16px; /* bigger list items */
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}'s Resume</h1>
+    <div class="section">
+        <strong>Email:</strong> {{ email }}<br>
+        <strong>Phone:</strong> {{ phone }}
+    </div>
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p>{{ summary }}</p>
+    </div>
+    <div class="section">
+        <h2>Education</h2>
+        <p>{{ education }}</p>
+    </div>
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+  {% for skill in skills_list %}
+    <li>{{ skill }}</li>
+  {% endfor %}
+</ul>
+
+      
+    </div>
+    <div class="section">
+        <h2>Experience</h2>
+        <p>{{ experience }}</p>
+    </div>
+</body>
+</html>
+

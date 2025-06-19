@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            font-size: 16px; /* increased font size */
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            font-size: 16px; /* bigger labels */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* bigger input text */
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* bigger button text */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .help-text {
+            font-size: 14px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 28px;">Resume Builder</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate PDF</button>
+    </form>
+</body>
+</html>
+
+
+
