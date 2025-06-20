@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-d-3^ei5!qkzfca&wnowx6(weafhh$k2++78%3d+r-*d3p=w9e)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://resume-1-j1rv.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'https://resume-1-j1rv.onrender.com', 
+    'resume-5254.onrender.com',  # Added the new host
+    'localhost', 
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -37,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-      'builder',
+    'builder',
 ]
 
 MIDDLEWARE = [
