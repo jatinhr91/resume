@@ -23,13 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d-3^ei5!qkzfca&wnowx6(weafhh$k2++78%3d+r-*d3p=w9e)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # Set to False for production
 
 ALLOWED_HOSTS = [
-    'https://resume-1-j1rv.onrender.com', 
-    'resume-5254.onrender.com',  # Added the new host
+    'resume-1-j1rv.onrender.com', 
+    'resume-5254.onrender.com',
     'localhost', 
-    '127.0.0.1'
+    '127.0.0.1',
 ]
 
 
@@ -104,10 +104,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+# CSRF Settings
 CSRF_TRUSTED_ORIGINS = [
     "https://resume-5254.onrender.com",
+    "https://resume-1-j1rv.onrender.com",
 ]
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Internationalization
