@@ -104,6 +104,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://resume-5254.onrender.com",
+]
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
